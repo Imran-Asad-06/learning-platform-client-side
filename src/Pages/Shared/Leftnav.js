@@ -15,7 +15,7 @@ const Leftnav = () => {
     
     return (
         <div>
-           <h2> All catagories {catagories.length}</h2>
+           <h2 className='mb-4'> All catagories {catagories.length}</h2>
            <div>
             {
                 catagories.map(catagory=> <p className='side-p' key={catagory.id}>

@@ -1,9 +1,20 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import CourseSummaryCard from '../Shared/CourseSummaryCard/CourseSummaryCard';
+import './home.css'
+
 
 const Home = () => {
+    const allcourse = useLoaderData()
     return (
-        <div>
-            <h3>This is home</h3>
+        <div className='courseCard'>
+            
+            {
+                allcourse.map(course=> <CourseSummaryCard
+                 key={course.id}  course={course}
+                ></CourseSummaryCard>)
+                
+            }
         </div>
     );
 };
