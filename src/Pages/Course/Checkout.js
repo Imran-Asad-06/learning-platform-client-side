@@ -5,6 +5,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 const Checkout = () => {
      const course=useLoaderData();
+     console.log(course);
      const {name,id} = course
 
     return (
@@ -24,7 +25,7 @@ const Checkout = () => {
 
             <h3>{name}</h3>
             <h3>{id}</h3>
-              <h1 className="fs-5 bg-info rounded p-1 mt-5">This Chart Shows How many People Bought  {course.course_name} This Year</h1>
+              <h1 className="fs-5 bg-info rounded p-1 mt-5">This Chart Shows How many People Bought  {course.name} This Year</h1>
                 <button onClick={()=>{
                     toast.success("Purchased SuccessFully")
                 }} className="btn btn-info">Click To Purchase</button>

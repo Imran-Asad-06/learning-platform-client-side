@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -8,9 +8,18 @@ import { FaUser } from 'react-icons/fa';
 import Button from 'react-bootstrap/Button';
 import { Image } from 'react-bootstrap';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import ReactSwitch from "react-switch";
 import './header.css'
 
+export const ThemeContext = createContext(null);
+
 const Header = () => {
+
+    const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
     const {user,logOut} = useContext(AuthContext)
 
     const handleLogOut = () => {
@@ -34,7 +43,17 @@ const Header = () => {
                     <Link className='headerButton' to="/faq">FAQ</Link>
                     
                     
-                    <Link className='headerButton'>Theme</Link>
+                    
+                    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+                        <div className="App" id={theme}>
+                            
+                            <div className="switch">
+                            <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label>
+                            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+                            </div>
+                        </div>
+                        </ThemeContext.Provider>
+                    
 
                    
                 </Nav>

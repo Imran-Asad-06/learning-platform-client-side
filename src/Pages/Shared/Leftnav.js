@@ -8,7 +8,7 @@ const Leftnav = () => {
     const [catagories,setcatagories]= useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/course-catagories')
+        fetch('https://online-learning-platform-server-imran-asad-06.vercel.app/course-catagories')
         .then(res=>res.json())
         .then(data=> setcatagories(data));
     },[])

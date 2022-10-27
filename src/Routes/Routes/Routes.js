@@ -10,6 +10,7 @@ import FAQ from "../../Component/FAQ";
 import Course from "../../Pages/Course/Course";
 import Checkout from "../../Pages/Course/Checkout";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import NotFound from "../../Component/NotFound";
 
 
 
@@ -24,12 +25,12 @@ export const routes = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=> fetch('http://localhost:5000/course')
+                loader:()=> fetch('https://online-learning-platform-server-imran-asad-06.vercel.app/course')
             },
             {
                 path:'/content',
                 element:<Content></Content>,
-                loader:()=> fetch('http://localhost:5000/course')
+                loader:()=> fetch('https://online-learning-platform-server-imran-asad-06.vercel.app/course')
                
             },
             {
@@ -47,7 +48,7 @@ export const routes = createBrowserRouter([
             {
                 path:'/checkout',
                 element:<PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader:({params})=> fetch(`http://localhost:5000/course/${params.id}`)
+                loader:({params})=> fetch(`https://online-learning-platform-server-imran-asad-06.vercel.app/course/${params.id}`)
             },
             {
                 path:'/registration',
@@ -56,12 +57,18 @@ export const routes = createBrowserRouter([
             {
                 path:'/catagory/:id',
                 element: <Catagory></Catagory>,
-                loader: ({params})=> fetch(`http://localhost:5000/catagories/${params.id}`)
+                loader: ({params})=> fetch(`https://online-learning-platform-server-imran-asad-06.vercel.app/catagories/${params.id}`)
             },
             {
                 path:'/course/:id',
                 element:<Course></Course>,
-                loader:({params})=> fetch(`http://localhost:5000/course/${params.id}`)
+                loader:({params})=> fetch(`https://online-learning-platform-server-imran-asad-06.vercel.app/course/${params.id}`)
+            },
+             
+            {
+                path:"*",
+                element:<NotFound></NotFound>
+
             }
         ]
     }
