@@ -7,24 +7,24 @@ const FAQ = () => {
             <h2>Frequently Ask Question</h2>
          <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Will my new website look good on my mobile phone, tablets and other devices ?
+          <Accordion.Header>When does the new academic session start? 
 
          </Accordion.Header>
           <Accordion.Body>
-          Yes, I build mobile responsive websites which render differently depending on the screen size from which it is viewed. Mobile responsive websites are a crucial part of your success today as most people tend to access websites these days using mobile devices
+          The new academic session in universities and colleges across the country will begin from October 1, while the admission process has to be completed by September 30, according to new guidelines of the rules
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
-          <Accordion.Header>Is it PBN website or Real website?
+          <Accordion.Header>What is the structure of academic levels? 
             </Accordion.Header>
           <Accordion.Body>
-          Please be assure that your guest post and article will be posted on real website with 100% traffic from organic sources such as Google and social media traffic (Linkedin, Facebook etc). This is exclusive gig and you can only post your article on the website through this gig only.
+          The academic structure and its elements are the building blocks for an academic institution, from the institution itself down to degrees. Components of the structure include such things as academic careers, academic departments, plans and subplans, subjects, etc.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-          <Accordion.Header>Will it be easy to edit my website? I am not a web developer.</Accordion.Header>
+          <Accordion.Header>What is the age requirement for the admission? </Accordion.Header>
           <Accordion.Body>
-          Absolutely. It'll be very easy to use and changes can be made easily from your dashboard. I'll also be happy to offer guidance in any way I can :)
+          Currently College Students and Admission Candidate..
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">

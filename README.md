@@ -1,3 +1,28 @@
+# Academy -- An online Learning Platform
+Website live live link : 
+
+* An React based project..
+* Authentication enabled by firebase
+* Backend is developed by nodejs ans express js
+* Bootstrap and vanilla CSS is used ...
+* Mobile responsive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
