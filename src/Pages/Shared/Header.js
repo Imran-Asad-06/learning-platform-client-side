@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import { Image } from 'react-bootstrap';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import ReactSwitch from "react-switch";
+import { FaBookReader } from 'react-icons/fa';
 import './header.css'
 
 export const ThemeContext = createContext(null);
@@ -31,7 +32,7 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container className='d-lg-flex justify-content-lg-between'>
               
-                <Navbar.Brand className='logo'>Academy</Navbar.Brand>
+                <Navbar.Brand className='logo'><FaBookReader className='me-2'></FaBookReader>  Academy</Navbar.Brand>
               
                
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
